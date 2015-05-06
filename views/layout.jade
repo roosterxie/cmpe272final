@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title Class Performance estimator
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    // load bootstrap css
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+    // load fontawesome
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800', rel='stylesheet', type='text/css')
+    style.
+      ul {
+        font-size: 17px;
+      }
+
+      li {
+      }
+
+      a:link, a:visited {
+        display: block;
+        width: auto;
+        font-weight: bold;
+        text-align: center;
+      / / color : #000;
+      / / background-color : #cc0000;
+      }
+
+      a:hover, a:active {
+      / / color : #0F0;
+      }
+
+
+  body(style={color: 'black', background: 'lightgrey'})
+    block nv
+    .bs-nv
+      nav.navbar-default(role='navigation')
+        #navbarCollapse.navbar-collapse
+          ul.navbar-left.navbar-nav.nav
+            li
+              a(href='/') Home
+    block content
+    block script
+  footer
+    p Copyright
+
