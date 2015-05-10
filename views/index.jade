@@ -1,22 +1,13 @@
 extends layout
 
-block nv
-  ul.navbar-right.navbar-nav.nav
-    li
-      a(href='/login') Login
-    li
-      a(href='/register') Register
-    li
-      a()
-
 block content
   .container
     .jumbotron.text-center
       h1
         spann.fa Welcome to the estimator
-      <br></br>
-      <br></br>
-      <br></br>
+      br
+      br
+      br
       form(method='post',action='/result')
         p Current GPA：
           input#inputUserGPA(type='text',name = 'inputGPA',placeholder = 'eg. 3.65')

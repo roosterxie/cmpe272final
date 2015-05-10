@@ -2,54 +2,55 @@
 
 extends layout
 block content
-   h1 Class Performance Estimator
-   p Welcome,
-      strong #{first} #{last}
-   #haha #{title}
+   .container
+      .jumbotron
+         h2 Class Performance Estimator
+         p Welcome,
+            strong #{first} #{last}
+         #haha #{title}
 
-      // Wrapper
-   #wrapper
-      #classInfo
-         h2 Class Detail
-         p
-            strong Department:
-            | <span id='classInfoDepartment'></span>
-            br
-            strong Class Number:
-            | <span id='classInfoNumber'></span>
-            br
-            strong Teacher:
-            | <span id='classInfoTeacher'></span>
-            br
-            strong Grade:
-            | <span id='classInfoGrade'></span>
-            br
-            strong Concurrent GPA:
-            | <span id='classInfoGPA'></span>
-      h2 Class List
-      #classList
-         table
-            thead
-               th Class
-               th Teacher
-               th Delete?
-            tbody
+            // Wrapper
+         #wrapper
+            #classInfo
+               h2 Class Detail
+               p
+                  strong Department:
+                  | <span id='classInfoDepartment'></span>
+                  br
+                  strong Class Number:
+                  | <span id='classInfoNumber'></span>
+                  br
+                  strong Teacher:
+                  | <span id='classInfoTeacher'></span>
+                  br
+                  strong Grade:
+                  | <span id='classInfoGrade'></span>
+                  br
+                  strong Concurrent GPA:
+                  | <span id='classInfoGPA'></span>
+            h2 Class List
+            #classList
+               table
+                  thead
+                     th Class
+                     th Teacher
+                     th Delete?
+                  tbody
 
-      h2 Add Class
-      #addClass
-         fieldset
-            p Department：
-               input#inputClassDepartment(type='text',placeholder = 'eg. CMPE')
-            p Class Number：
-               input#inputClassNumber(type='text',placeholder = 'eg. 202')
-            p Teacher：
-               input#inputClassTeacher(type='text',placeholder = 'eg. Paul')
-            p Grade(in number)：
-               input#inputClassGrade(type='number',placeholder = 'eg. A- is 3.67')
-            p concurrent GPA：
-               input#inputClassGpa(type='number',placeholder = 'eg. 3.65')
-            button#btnAddClass Add Class
+            h2 Add Class
+            #addClass
+               fieldset
+                  p Department：
+                     input#inputClassDepartment(type='text',placeholder = 'eg. CMPE')
+                  p Class Number：
+                     input#inputClassNumber(type='text',placeholder = 'eg. 202')
+                  p Teacher：
+                     input#inputClassTeacher(type='text',placeholder = 'eg. Paul')
+                  p Grade(in number)：
+                     input#inputClassGrade(type='number',placeholder = 'eg. A- is 3.67')
+                  p concurrent GPA：
+                     input#inputClassGpa(type='number',placeholder = 'eg. 3.65')
+                  button#btnAddClass Add Class
 
 block script
-   script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
    script(src='/javascripts/global.js')

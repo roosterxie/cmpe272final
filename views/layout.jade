@@ -1,20 +1,30 @@
 doctype html
-html
+html(lang = 'en')
   head
+    meta(charset='utf-8')
+    meta(content='IE=edge', http-equiv='X-UA-Compatible')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
     title Class Performance estimator
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
     // load bootstrap css
     link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
-    // load fontawesome
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800', rel='stylesheet', type='text/css')
+
+    <!--[if lt IE 9 ]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
     style.
       ul {
-        font-size: 17px;
+
       }
 
       li {
+        font-size: 17px;
       }
 
       a:link, a:visited {
@@ -22,17 +32,38 @@ html
         width: auto;
         font-weight: bold;
         text-align: center;
-      / / color : #000;
-      / / background-color : #cc0000;
+        / / color : #fff;
+        / / background-color : #cc0000;
       }
 
       a:hover, a:active {
-      / / color : #0F0;
+        / / color : #0F0;
       }
 
 
   body(style={color: 'black', background: 'lightgrey'})
-    block nv
+    .container
+      .bs-nv
+      nav.navbar-default(role='navigation')
+        #navbarCollapse.navbar-collapse
+          ul.navbar-left.navbar-nav.nav
+            li
+              a(href='/') Home
+
+          ul.navbar-right.navbar-nav.nav
+            if user
+              li
+                a(href='/profile') Profile
+              li
+                a(href='/logout') Logout
+            else
+              li
+                a(href='/login') Login
+      block content
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+      block script
+  //body(style={color: 'black', background: 'lightgrey'})
     .bs-nv
       nav.navbar-default(role='navigation')
         #navbarCollapse.navbar-collapse
@@ -41,6 +72,7 @@ html
               a(href='/') Home
     block content
     block script
-  footer
-    p Copyright
 
+//ul.nav.nav-pills.pull-left
+    li
+      a(href='/') Home

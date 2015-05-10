@@ -32,7 +32,10 @@ app.use(stormpath.init(app, {
   expandCustomData: true,
   enableConfirmPassword: true,
   enableForgotPassword : true,
-  redirectUrl: '/profile'
+  redirectUrl: '/profile',
+  registrationView: __dirname + '/views/register.jade',
+  loginView: __dirname + '/views/login.jade',
+  forgotPasswordView: __dirname + '/views/forgot.jade'
 }));
 
 app.use(function(req,res,next){
