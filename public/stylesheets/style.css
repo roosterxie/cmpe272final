@@ -60,11 +60,13 @@ nav ul li{
   position:absolute;
   top:0; left:0;
 }
-  #classInfo p {
-    padding:15px;
-    border:1px solid #CCC;
-    background:rgba(80,120,255,0.05);
-  }
+
+#classInfo p {
+  font-size: 13px;
+  padding:13px;
+  border:1px solid #CCC;
+  background:rgba(80,120,255,0.05);
+}
 
 fieldset {
   border:0;
@@ -77,11 +79,23 @@ fieldset {
 
 body,
 div,
-p,
-a,
 label {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
   color: #484848;
+}
+
+a {
+  color: #0072dd;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#addClass p{
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 400;
+  color: cadetblue;
 }
