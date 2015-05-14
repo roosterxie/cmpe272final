@@ -29,7 +29,7 @@ function populateTable() {
         // For each item in our JSON, add a table row and cells to the content string
         $.each(data, function(){
             tableContent += '<tr>';
-            tableContent += '<td><a href="#" class="linkshowclass" rel="' + this.class_number + '">' + this.department + this.class_number+'</a></td>';
+            tableContent += '<td><a href="#" class="linkshowclass" rel="' + this._id + '">' + this.department + this.class_number+'</a></td>';
             tableContent += '<td>' + this.teacher + '</td>';
             tableContent += '<td><a href="#" class="linkdeleteclass" rel="' + this._id + '">delete</a></td>';
             tableContent += '</tr>';
@@ -45,7 +45,7 @@ function showClassInfo(event){
 
     var thisClassName = $(this).attr('rel');
 
-    var arrayPosition = classListData.map(function(arrayItem){return arrayItem.class_number;}).indexOf(thisClassName);
+    var arrayPosition = classListData.map(function(arrayItem){return arrayItem._id;}).indexOf(thisClassName);
 
     var thisClassObject = classListData[arrayPosition];
 

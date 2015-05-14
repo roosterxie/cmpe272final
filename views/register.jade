@@ -11,7 +11,8 @@ block body
         .box.row
           .col-sm-12
             .header
-              span Create Account(You have to verify account after registration)
+              span Create Account
+              span <br> *You have to verify account after registration</br>
 
             if error
               .alert.alert-danger
@@ -60,13 +61,14 @@ block body
                   input.form-control(placeholder='Email', name='email', value=value, required='true', type='text')
 
               .form-group.group-password(form-group='true')
-                label.col-sm-4 Password (*at least 8 number and letter with uppercase,lowercase)
+                label.col-sm-4 Password
                 .col-sm-8
                   input.form-control(placeholder='Password', name='password', required='true', type='password')
 
               if app.get('stormpathEnableConfirmPassword')
                 .form-group.group-confirm-password(form-group='true')
                   label.col-sm-4 Confirm Password
+                    p (*at least 8 number and letter with uppercase,lowercase)
                   .col-sm-8
                     input.form-control(placeholder='Confirm Password', name='confirmPassword', required='true', type='password')
 
